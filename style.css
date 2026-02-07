@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url("fotos/cielo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* PORTADA */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+/* CONTADOR */
+.contador {
+    padding: 50px 20px;
+    background: white;
+}
+
+#tiempo {
+    font-size: 2em;
+    color: #e91e63;
+    margin-top: 10px;
+}
+
+/* TIMELINE */
+.timeline {
+    padding: 50px 15px;
+}
+
+.evento {
+    background: white;
+    margin: 25px auto;
+    padding: 18px;
+    border-radius: 15px;
+    max-width: 550px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: 0.4s;
+}
+
+.evento:hover {
+    transform: scale(1.03);
+}
+
+.evento img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FINAL */
+.final {
+    padding: 80px 20px;
+    color: white;
+    background-color: darkred;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CORAZONES */
+.hearts span {
+    position: fixed;
+    bottom: -10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-110vh);
+    }
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    #tiempo {
+        font-size: 1.6em;
+    }
+
+    .evento {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .evento h3 {
+        font-size: 1.2em;
+    }
+
+    .evento p {
+        font-size: 0.95em;
+    }
+
+    .final h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: url("fotos/cielo.jpg") no-repeat center center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
